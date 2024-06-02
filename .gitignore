@@ -1,0 +1,4 @@
+*.DS_Store
+*.kicad_sch.lck
+*.kicad_prl
+fp-info-cache
