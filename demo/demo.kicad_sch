@@ -203,7 +203,7 @@
 			(uuid "b2e17607-c0e3-4c79-9d4b-3a66c220dd95")
 		)
 		(instances
-			(project "hacknight_demo"
+			(project "demo"
 				(path "/5d7e0e7e-5bcb-42a9-9719-ae5f9ba54442"
 					(reference "C1")
 					(unit 1)
