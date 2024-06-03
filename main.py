@@ -7,7 +7,13 @@ import os
 import ast
 import sys
 
-schematic_file_path = "hacknight_demo.kicad_sch"
+# Settings:
+####################################################################
+os.environ["DIGIKEY_CLIENT_ID"] = "QlnQBYLGQCUJPG2xAydT5zUbrSzsARya"
+os.environ["DIGIKEY_CLIENT_SECRET"] = "pCN17uORphL5KIys"
+os.environ["DIGIKEY_STORAGE_PATH"] = "cache_dir"
+schematic_file_path = "demo/demo.kicad_sch"
+####################################################################
 
 def get_component_value(schematic_file, ref_des):
     try:
@@ -78,10 +84,7 @@ def set_component_value(schematic_file, ref_des, new_value):
     except Exception as e:
         print(f"An error occurred: {e}")
         return False
-    
-os.environ["DIGIKEY_CLIENT_ID"] = "QlnQBYLGQCUJPG2xAydT5zUbrSzsARya"
-os.environ["DIGIKEY_CLIENT_SECRET"] = "pCN17uORphL5KIys"
-os.environ['DIGIKEY_STORAGE_PATH'] = "cache_dir"
+
 
 component_ref = str(sys.argv[1])
 search = str(get_component_value(schematic_file_path, component_ref))
